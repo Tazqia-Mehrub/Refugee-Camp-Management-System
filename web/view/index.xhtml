@@ -6,6 +6,22 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-    <h:outputLabel value="Hello, world"/>
+
 </f:view>
+<h:form>
+
+    <h:outputText value="Username: "></h:outputText>
+    <h:inputText id="LabelUsername" value="#{r.log.client_username}"></h:inputText>
+    <br></br>
+    <h:outputText value="Password: "></h:outputText>
+    <h:inputSecret value="#{r.log.password}"></h:inputSecret>
+    <br></br>
+    <h:commandButton value="submit" action="success.xhtml"></h:commandButton>
+    <br></br>
+
+
+
+
+</h:form>
+
 </html>
