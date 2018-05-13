@@ -34,16 +34,17 @@ public class loginCon {
             String username=log.getClient_username();
             String password=log.getPassword();
             System.out.println(username);
+            System.out.println(password);
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con= DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","ict","Oracle_1");
             Statement st=con.createStatement();
-            System.out.println("asdasda");
-            ResultSet rs=st.executeQuery("select gender,block from camp");
+
+            ResultSet rs=st.executeQuery("select * from login");
             while(rs.next())
             {
-
-                String user=rs.getString("gender");
-                String pass=rs.getString("block");
+                System.out.println("between");System.out.println("between");
+                String user=rs.getString("username");
+                String pass=rs.getString("password");
                 System.out.println(user);
                 System.out.println(pass);
                 if(username.equals(user) && password.equals(pass))
@@ -61,7 +62,7 @@ public class loginCon {
             if(p!=1)
             {
                 log.setStatus("username or password is invalid");
-                return "index";
+                return "success";
 
             }
 

@@ -6,6 +6,13 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-    <h:outputLabel value="Hello, world"/>
 </f:view>
+    <h:form>
+    <h:commandButton value="submit" action="admin.xhtml"></h:commandButton>
+    <br></br>
+<h:outputLabel value="#{r.log.status}"></h:outputLabel>
+        <h:graphicImage value="resources/images/cry.jpeg"></h:graphicImage>
+    </h:form>
+
+
 </html>
