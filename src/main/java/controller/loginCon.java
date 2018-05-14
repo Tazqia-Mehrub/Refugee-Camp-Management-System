@@ -54,7 +54,7 @@ public class loginCon {
                     HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
                     session.setAttribute("c_username",user);
                     session.setAttribute("c_password",pass);
-                   log.setStatus("Login Successful.....Hello");
+                   log.setStatus("Login Successful.....welcome");
 
                     return "success";
                 }
@@ -62,7 +62,7 @@ public class loginCon {
             if(p!=1)
             {
                 log.setStatus("username or password is invalid");
-                return "success";
+                return "index";
 
             }
 
