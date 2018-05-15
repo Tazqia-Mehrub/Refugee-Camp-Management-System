@@ -3,7 +3,10 @@ package data.model;
 public class DonationDetails {
     private String donation_type;
     private String donation_date;
-    private String donor_date;
+    private String donorName;
+
+    public DonationDetails() {
+    }
 
     public String getDonation_type() {
         return donation_type;
@@ -21,11 +24,11 @@ public class DonationDetails {
         this.donation_date = donation_date;
     }
 
-    public String getDonor_date() {
-        return donor_date;
+    public String getDonorName() {
+        return donorName;
     }
 
-    public void setDonor_date(String donor_date) {
-        this.donor_date = donor_date;
+    public void setDonorName(String donorName) {
+        this.donorName = donorName;
     }
 }

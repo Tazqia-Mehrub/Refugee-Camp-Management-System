@@ -10,9 +10,9 @@
     <navigation-rule>
         <from-view-id>../view/index.xhtml</from-view-id>
         <navigation-case>
-            <from-action>#{r.signin}</from-action>
-            <from-outcome>success</from-outcome>
-            <to-view-id>../view/success.xhtml</to-view-id>
+            <from-action>#{donorbean.isNextPage}</from-action>
+            <from-outcome>donation_details</from-outcome>
+            <to-view-id>../view/donation_details.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 
