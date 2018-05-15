@@ -7,14 +7,21 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
 
-    <h:outputLabel value="Hello, world"/>
+    <h:outputLabel value=""/>
 </f:view>
 <h:form>
-<h:commandButton value="Home" action="home"></h:commandButton>
-<h:commandButton value="Info" action="info"></h:commandButton>
-<h:commandButton value="Donation Details" action="#{donorbean.isNextPage}"></h:commandButton>
-<h:commandButton value="Contact Us" action="contact_us"></h:commandButton>
-<h:commandButton value="Help" action="help"></h:commandButton>
-<h:commandButton value="Logout" action="rinfo"></h:commandButton>
+<h:commandButton value="Home" action="home" style="background-color: brown"></h:commandButton>
+<h:commandButton value="Info" action="info" style="background-color: brown"></h:commandButton>
+<h:commandButton value="Donation Details" action="#{donorbean.isNextPage}" style="background-color: brown"></h:commandButton>
+<h:commandButton value="Contact Us" action="contact_us" style="background-color: brown"></h:commandButton>
+<h:commandButton value="Help" action="help" style="background-color: brown"></h:commandButton>
+<h:commandButton value="Logout" action="rinfo" style="background-color: brown"></h:commandButton>
+    <h:graphicImage value="resources/images/rohingya-muslim-buddhist-myanmar-bangladesh.jpg"></h:graphicImage>
+
+
+
 </h:form>
+
+
+
 </html>
