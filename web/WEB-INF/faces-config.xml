@@ -15,6 +15,23 @@
             <to-view-id>../view/donation_details.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+    <navigation-rule>
+        <from-view-id>../view/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{r.signin}</from-action>
+            <from-outcome>admin</from-outcome>
+            <to-view-id>../view/admin.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 
+    <navigation-rule>
+        <from-view-id>../view/admin.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{retrievebean.retrieveValue}</from-action>
+            <from-outcome>rinfo</from-outcome>
+            <to-view-id>../view/rinfo.xhtml</to-view-id>
+
+        </navigation-case>
+    </navigation-rule>
 
 </faces-config>

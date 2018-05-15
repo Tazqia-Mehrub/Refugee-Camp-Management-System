@@ -12,13 +12,14 @@
 
 </h:head>
 <h:body>
-    <h:commandButton value="Home" action="#{r.signin}"></h:commandButton>
-    <h:commandButton value="Updates" action="#{r.signin}"></h:commandButton>
-    <h:commandButton value="Update Info" action="#{r.signin}"></h:commandButton>
-    <h:commandButton value="Retrieve Info" action="#{r.signin}"></h:commandButton>
-    <h:commandButton value="Registration" action="#{r.signin}"></h:commandButton>
-    <h:commandButton value="Logout" action="#{r.signin}"></h:commandButton>
+    <h:form>
+    <h:commandButton value="Home" action="home"></h:commandButton>
+    <h:commandButton value="Updates" action="updates"></h:commandButton>
+    <h:commandButton value="Update Info" action="uinfo"></h:commandButton>
+    <h:commandButton value="Retrieve Info" action="#{retrievebean.retrieveValue}"></h:commandButton>
+    <h:commandButton value="Registration" action="registration_doctor"></h:commandButton>
+    <h:commandButton value="Logout" action="help"></h:commandButton>
 
-
+    </h:form>
 </h:body>
 </html>
