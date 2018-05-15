@@ -6,6 +6,22 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-    <h:outputLabel value="Hello, world"/>
+
 </f:view>
+<head>
+    <title>
+
+    </title>
+</head>
+<h:body>
+    <h2>Volunteer information</h2><br/>
+    <h:dataTable value="#{retrievebean.volunteerInfo}" var="c">
+        <h:column>Volunteer Id  </h:column>
+        <h:column >#{c.volunteerId}</h:column>
+        <h:column>Volunteer Name  </h:column>
+        <h:column>#{c.volunteerName}</h:column>
+        <h:column>Volunteer of the Organization  </h:column>
+        <h:column>#{c.volunteerOf}</h:column>
+    </h:dataTable>
+</h:body>
 </html>

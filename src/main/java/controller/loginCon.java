@@ -56,7 +56,7 @@ public class loginCon {
                     session.setAttribute("c_password",pass);
                    log.setStatus("Login Successful.....welcome");
 
-                    return "success";
+                    return "admin";
                 }
             }
             if(p!=1)
