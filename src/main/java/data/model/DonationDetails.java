@@ -1,9 +1,12 @@
 package data.model;
 
+import java.sql.Date;
+
 public class DonationDetails {
     private String donation_type;
-    private String donation_date;
-    private String donorName;
+    private String donor_type;
+   private  int distributor_id;
+   private Date donation_date;
 
     public DonationDetails() {
     }
@@ -16,19 +19,27 @@ public class DonationDetails {
         this.donation_type = donation_type;
     }
 
-    public String getDonation_date() {
+    public String getDonor_type() {
+        return donor_type;
+    }
+
+    public void setDonor_type(String donor_type) {
+        this.donor_type = donor_type;
+    }
+
+    public int getDistributor_id() {
+        return distributor_id;
+    }
+
+    public void setDistributor_id(int distributor_id) {
+        this.distributor_id = distributor_id;
+    }
+
+    public Date getDonation_date() {
         return donation_date;
     }
 
-    public void setDonation_date(String donation_date) {
+    public void setDonation_date(Date donation_date) {
         this.donation_date = donation_date;
-    }
-
-    public String getDonorName() {
-        return donorName;
-    }
-
-    public void setDonorName(String donorName) {
-        this.donorName = donorName;
     }
 }

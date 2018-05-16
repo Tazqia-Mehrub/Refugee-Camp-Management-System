@@ -1,7 +1,6 @@
 package controller;
 
-
-import data.model.login;
+import data.model.donLog;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -12,27 +11,26 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-@ManagedBean(name = "r")
+@ManagedBean(name = "donorLogbean")
 @SessionScoped
-
-public class loginCon {
-    public loginCon() {
+public class donLogCon {
+    public donLogCon() {
     }
-    login log=new login();
+    donLog donor=new donLog();
 
-    public login getLog() {
-        return log;
-    }
-
-    public void setLog(login log) {
-        this.log = log;
+    public donLog getDonor() {
+        return donor;
     }
 
-    public String signin(){
+    public void setDonor(donLog donor) {
+        this.donor = donor;
+    }
+
+    public String donsignin(){
         int p=0;
         try{
-            String username=log.getVusername();
-            String password=log.getPassword();
+            String username=donor.getDusername();
+            String password=donor.getDpassword();
             System.out.println(username);
             System.out.println(password);
             Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -54,15 +52,15 @@ public class loginCon {
                     HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
                     session.setAttribute("c_username",user);
                     session.setAttribute("c_password",pass);
-                   log.setStatus("Login Successful.....welcome");
+                    donor.setDstatus("Login Successful.....welcome");
 
-                    return "admin";
+                    return "donor";
                 }
             }
             if(p!=1)
             {
-                log.setStatus("username or password is invalid");
-                return "index";
+                donor.setDstatus("username or password is invalid");
+                return "donlog";
 
             }
 
@@ -74,13 +72,7 @@ public class loginCon {
         return null;
     }
 
-            }
 
 
 
-
-
-
-
-
-
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+>
+
+
+<h:body>
+
+    <h1>DOCTOR</h1>
+    <br></br>
+    <h:form>
+        <h:commandButton value="Home" style="background-color: greenyellow" action="home"></h:commandButton>
+        <h:commandButton value="Contact Us" style="background-color: greenyellow" action="home"></h:commandButton>
+        <h:commandButton value="Help" style="background-color: greenyellow" action="home"></h:commandButton>
+    </h:form>
+    <br></br>
+    <br></br>
+
+    <h:dataTable value="#{rrr.doctor}" var="c">
+        <h:column>
+            <f:facet name="header">
+                Name
+            </f:facet>
+            #{c.doctorName}
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                Address
+            </f:facet>
+            #{c.specialist}
+        </h:column>
+
+
+
+    </h:dataTable>
+
+</h:body>
+
+</html>

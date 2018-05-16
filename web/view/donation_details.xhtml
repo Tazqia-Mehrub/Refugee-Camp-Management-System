@@ -6,6 +6,44 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-    <h:outputLabel value="Hello, world"/>
+    <h:outputLabel value="DONATE NOW"/>
+    <h1>Donation Details</h1>
+
+    <h:dataTable value="#{donorbean.donationDetails}" var="l">
+
+
+
+
+    <h:column>
+        <f:facet name="header">
+            donation_type
+        </f:facet>
+        #{l.donation_type}
+    </h:column>
+
+    <h:column>
+        <f:facet name="header">
+            donation date
+        </f:facet>
+        #{l.donation_date}
+    </h:column>
+        <h:column>
+            <f:facet name="header">
+                distributor Id
+            </f:facet>
+            #{l.distributor_id}
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                donor_type
+            </f:facet>
+            #{l.donor_type}
+        </h:column>
+
+
+
+
+    </h:dataTable>
+
 </f:view>
 </html>

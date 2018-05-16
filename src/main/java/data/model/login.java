@@ -1,7 +1,7 @@
 package data.model;
 
 public class login {
-    private String client_username;
+    private String vusername;
     private String password;
     private String client_name;
     private String client_address;
@@ -13,12 +13,12 @@ public class login {
     public login() {
     }
 
-    public String getClient_username() {
-        return client_username;
+    public String getVusername() {
+        return vusername;
     }
 
-    public void setClient_username(String client_username) {
-        this.client_username = client_username;
+    public void setVusername(String vusername) {
+        this.vusername = vusername;
     }
 
     public String getPassword() {

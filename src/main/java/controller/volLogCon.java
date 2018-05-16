@@ -1,7 +1,6 @@
 package controller;
 
-
-import data.model.login;
+import data.model.volLog;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -12,27 +11,27 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-@ManagedBean(name = "r")
+@ManagedBean(name = "volLogbean")
 @SessionScoped
-
-public class loginCon {
-    public loginCon() {
-    }
-    login log=new login();
-
-    public login getLog() {
-        return log;
+public class volLogCon{
+    public volLogCon() {
     }
 
-    public void setLog(login log) {
-        this.log = log;
+    volLog vollog = new volLog();
+
+    public volLog getVollog() {
+        return vollog;
     }
 
-    public String signin(){
+    public void setVollog(volLog vollog) {
+        this.vollog = vollog;
+    }
+
+    public String volsignin(){
         int p=0;
         try{
-            String username=log.getVusername();
-            String password=log.getPassword();
+            String username=vollog.getAusername();
+            String password=vollog.getApassword();
             System.out.println(username);
             System.out.println(password);
             Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -54,14 +53,14 @@ public class loginCon {
                     HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
                     session.setAttribute("c_username",user);
                     session.setAttribute("c_password",pass);
-                   log.setStatus("Login Successful.....welcome");
+                    vollog.setVolstatus("Login Successful.....welcome");
 
-                    return "admin";
+                    return "volunteerRead";
                 }
             }
             if(p!=1)
             {
-                log.setStatus("username or password is invalid");
+                vollog.setVolstatus("username or password is invalid");
                 return "index";
 
             }
@@ -74,13 +73,4 @@ public class loginCon {
         return null;
     }
 
-            }
-
-
-
-
-
-
-
-
-
+}

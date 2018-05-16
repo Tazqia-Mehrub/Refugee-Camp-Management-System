@@ -7,6 +7,36 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
 
+    <h1>Refugee Management System</h1>
+    <br></br>
+
+    <h2>HOME</h2>
+    <h:form>
+        <h:commandButton  value="Home " style="background:greenyellow"></h:commandButton>
+        <h:commandButton value="Info " action="info" style="background-color: greenyellow"></h:commandButton>
+        <h:commandButton value ="doctor" action="#{rrr.isNextPage}"  style="background-color: greenyellow"></h:commandButton>
+        <h:commandButton value="Donated items" action="#{rd.logOut}" style="background-color: greenyellow"></h:commandButton>
+        <h:commandButton value="Contact us" action="contact us" style="background-color: greenyellow"></h:commandButton>
+        <h:commandButton value ="Help" action ="help"  style="background-color: greenyellow" ></h:commandButton>
+
+
+        <br></br>
+        <br></br>
+
+
+        <br> <h:outputText style="background-color: red" value="Login" styleClass="box"></h:outputText></br>
+        <h:commandButton value="Admin" action="index" style="background-color: greenyellow"></h:commandButton>
+        <h:commandButton value="Volunteer" action="volunteerlogin" style="background-color: greenyellow"></h:commandButton>
+        <h:commandButton value="Donor" action="donlog" style="background-color: greenyellow"></h:commandButton>
+
+        <br></br>
+        <h:graphicImage value="resources/images/simple.jpg"></h:graphicImage>
+
+    </h:form>
+
+
+
 </f:view>
 
 </html>
+

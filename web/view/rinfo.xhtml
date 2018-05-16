@@ -13,15 +13,26 @@
 
     </title>
 </head>
+<h:form>
+    <h:commandButton value="Back" action="admin" style="background-color: lavender"></h:commandButton>
+    <br></br>
 <h:body>
     <h2>Volunteer information</h2><br/>
     <h:dataTable value="#{retrievebean.volunteerInfo}" var="c">
-        <h:column>Volunteer Id  </h:column>
-        <h:column >#{c.volunteerId}</h:column>
-        <h:column>Volunteer Name  </h:column>
-        <h:column>#{c.volunteerName}</h:column>
-        <h:column>Volunteer of the Organization  </h:column>
-        <h:column>#{c.volunteerOf}</h:column>
+
+        <br></br>
+        <h:column> <f:facet name = "header">Volunteer Id    </f:facet>
+            #{c.volunteerId}</h:column>
+
+        <br></br>
+        <h:column> <f:facet name = "header">Volunteer Name     </f:facet>  #{c.volunteerName}</h:column>
+
+
+        <h:column> <f:facet name = "header">   Volunteer of the Organization</f:facet>  #{c.volunteerOf}</h:column>
+        <br></br>
+
     </h:dataTable>
+
 </h:body>
+</h:form>
 </html>

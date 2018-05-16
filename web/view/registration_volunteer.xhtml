@@ -8,4 +8,38 @@
 <f:view>
     <h:outputLabel value="Hello, world"/>
 </f:view>
+<h1>Refugee Management System</h1>
+<br></br>
+
+<h2>Volunteer Registration</h2>
+<br></br>
+
+<h:form>
+    <br/>
+    <br/>
+    <h:outputText value="Name: "></h:outputText>
+    <h:inputText id="volunteername" value="#{regbean.regV.volunteerName}" ></h:inputText>
+
+    <br></br>
+
+    <h:outputText value="Id"></h:outputText>
+    <h:inputText id="volunteerid" value="#{regbean.regV.volunteerId}"></h:inputText>
+    <br></br>
+
+
+    <h:outputText value="Type: "></h:outputText>
+    <h:inputText id="volunteertype" value="#{regbean.regV.volunteerType}"></h:inputText>
+
+    <br></br>
+
+
+
+    <h:commandButton value="Submit" action="#{regbean.registration}"></h:commandButton>
+    <h:commandButton value="Back" action="admin" style="background-color: lavender"></h:commandButton>
+    <br></br>
+</h:form>
+
+
+
+
 </html>

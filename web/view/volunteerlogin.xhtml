@@ -6,12 +6,31 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-    <h:outputLabel value="Hello, world"/>
+
 </f:view>
 <h1>Refugee Management System</h1>
 <br></br>
 
 <h2>HOME</h2>
 <br></br>
+
+<h:form>
+
+    <h:outputText value="Username: "></h:outputText>
+    <h:inputText id="LabelVolusername" value="#{volLogbean.vollog.ausername}"></h:inputText>
+    <br></br>
+    <h:outputText value="Volpassword: "></h:outputText>
+    <h:inputSecret value="#{volLogbean.vollog.apassword}"></h:inputSecret>
+    <br></br>
+    <h:commandButton value="submit" action="#{volLogbean.volsignin}"></h:commandButton>
+    <br></br>
+
+
+
+
+
+</h:form>
+
+
 
 </html>

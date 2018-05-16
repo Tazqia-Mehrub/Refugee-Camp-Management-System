@@ -6,23 +6,25 @@
               version="2.0">
 
 
+    <navigation-rule>
+        <from-view-id>../view/volunteerlogin.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{volLogbean.volsignin}</from-action>
+            <from-outcome>volunteerRead</from-outcome>
+            <to-view-id>../view/volunteerRead.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
 
     <navigation-rule>
-        <from-view-id>../view/index.xhtml</from-view-id>
-        <navigation-case>
-            <from-action>#{donorbean.isNextPage}</from-action>
-            <from-outcome>donation_details</from-outcome>
-            <to-view-id>../view/donation_details.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
-    <navigation-rule>
-        <from-view-id>../view/index.xhtml</from-view-id>
-        <navigation-case>
-            <from-action>#{r.signin}</from-action>
-            <from-outcome>admin</from-outcome>
-            <to-view-id>../view/admin.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
+    <from-view-id>../view/index.xhtml</from-view-id>
+    <navigation-case>
+        <from-action>#{r.signin}</from-action>
+        <from-outcome>admin</from-outcome>
+        <to-view-id>../view/admin.xhtml</to-view-id>
+    </navigation-case>
+</navigation-rule>
+
 
     <navigation-rule>
         <from-view-id>../view/admin.xhtml</from-view-id>
@@ -33,5 +35,40 @@
 
         </navigation-case>
     </navigation-rule>
+    <navigation-rule>
+        <from-view-id>../view/admin.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{regbean.registration}</from-action>
+            <from-outcome>registration_volunteer</from-outcome>
+            <to-view-id>../view/registration_volunteer.xhtml</to-view-id>
+
+        </navigation-case>
+    </navigation-rule>
+
+
+    <navigation-rule>
+        <from-view-id>../view/donlog.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{donorLogbean.donsignin}</from-action>
+            <from-outcome>donor</from-outcome>
+            <to-view-id>../view/donor.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>../view/donor.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{donorbean.donationDetails}</from-action>
+            <from-outcome>donation_details</from-outcome>
+            <to-view-id>../view/donation_details.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+
+
+
+
+
 
 </faces-config>

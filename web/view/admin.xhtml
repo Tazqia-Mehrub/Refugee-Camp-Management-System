@@ -6,19 +6,22 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-    <h:outputLabel value="Hello, world"/>
+
 </f:view>
 <h:head>
-
+<h1> Refugee Management System</h1>
+ <br></br>
+<h2> Adiminstrator</h2>
+    <br></br>
 </h:head>
 <h:body>
     <h:form>
-    <h:commandButton value="Home" action="home"></h:commandButton>
-    <h:commandButton value="Updates" action="updates"></h:commandButton>
-    <h:commandButton value="Update Info" action="uinfo"></h:commandButton>
-    <h:commandButton value="Retrieve Info" action="#{retrievebean.retrieveValue}"></h:commandButton>
-    <h:commandButton value="Registration" action="registration_doctor"></h:commandButton>
-    <h:commandButton value="Logout" action="help"></h:commandButton>
+    <h:commandButton value="Home" action="home"   style="background-color: lavender"></h:commandButton>
+    <h:commandButton value="Updates" action="updates"  style="background-color: lavender"></h:commandButton>
+    <h:commandButton value="Update Info" action="uinfo" style="background-color: lavender"></h:commandButton>
+    <h:commandButton value="Retrieve Info" action="#{retrievebean.retrieveValue}" style="background-color: lavender"></h:commandButton>
+    <h:commandButton value="Registration" action="#{regbean.goReg}" style="background-color: lavender"></h:commandButton>
+    <h:commandButton value="Logout" action="home" style="background-color: lavender"></h:commandButton>
 
     </h:form>
 </h:body>

@@ -21,13 +21,14 @@ public class DonationDetailsCon {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con= DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","ict","Oracle_1");
             Statement st=con.createStatement();
-            ResultSet rs=st.executeQuery("select* from donordetails");
+            ResultSet rs=st.executeQuery("select* from donation");
             while(rs.next())
             {
                 DonationDetails don=new DonationDetails();
-                don.setDonation_date(rs.getString(1));
-                don.setDonation_type(rs.getString(2));
-                don.setDonorName(rs.getString(3));
+                don.setDonation_type(rs.getString(1));
+                don.setDonation_date(rs.getDate(2));
+                don.setDistributor_id(rs.getInt(3));
+                don.setDonor_type(rs.getString(4));
                 records.add(don);
             }
 

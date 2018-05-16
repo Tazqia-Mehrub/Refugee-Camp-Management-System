@@ -1,20 +1,20 @@
 package data.model;
 
-public class regsitrationVolunteer {
-    private String volunteerId;
+public class registrationVolunteer {
+    private int volunteerId;
     private  String volunteerName;
-    private  String age;
+    private  String volunteerType;
     private String  gender;
     private String password;
-
-    public regsitrationVolunteer() {
+    private String status;
+    public registrationVolunteer() {
     }
 
-    public String getVolunteerId() {
+    public int getVolunteerId() {
         return volunteerId;
     }
 
-    public void setVolunteerId(String volunteerId) {
+    public void setVolunteerId(int volunteerId) {
         this.volunteerId = volunteerId;
     }
 
@@ -26,12 +26,12 @@ public class regsitrationVolunteer {
         this.volunteerName = volunteerName;
     }
 
-    public String getAge() {
-        return age;
+    public String getVolunteerType() {
+        return volunteerType;
     }
 
-    public void setAge(String age) {
-        this.age = age;
+    public void setVolunteerType(String volunteerType) {
+        this.volunteerType = volunteerType;
     }
 
     public String getGender() {
@@ -48,5 +48,13 @@ public class regsitrationVolunteer {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
