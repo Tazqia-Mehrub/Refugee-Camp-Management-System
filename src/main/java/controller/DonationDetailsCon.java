@@ -19,7 +19,7 @@ public class DonationDetailsCon {
         ArrayList<DonationDetails>records=new ArrayList<>();
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            Connection con= DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","ict","Oracle_1");
+            Connection con= DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","username","Oracle_1");
             Statement st=con.createStatement();
             ResultSet rs=st.executeQuery("select* from donation");
             while(rs.next())
